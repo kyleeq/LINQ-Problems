@@ -42,9 +42,24 @@ namespace LINQworksheet
             }
         }
 
-        public void NamesWithoutRepeats()
+        public void NamesWithoutRepeat(List<string> names)
         {
+            List<string> namesWithoutRepeat = new List<string>();
+            
+            foreach (string name in names)
+            {
+               if (namesWithoutRepeat.Contains(name) == false)
+                {
+                    namesWithoutRepeat.Add(name);
+                    Console.WriteLine(name);
+                }
+            }
+        }
 
+        public void NamesWithoutRepeatsWithLINQ(List<string> names)
+        {
+            List<string> namesWithoutRepeat = new List<string>();
+            //var namesWithoutRepeat = names.Where(n => n.)
         }
     }
 }
