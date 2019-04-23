@@ -32,12 +32,10 @@ namespace LINQworksheet
         }
 
         public void WordsThatContainThWithLINQ(List<string> words)
-        {
-            List<string> wordWithTh = new List<string>();
+        {           
             var wordsWithTh = words.Where(w => w.Contains("th")).ToList();
-            foreach(string word in words)
+            foreach(string word in wordsWithTh)
             {
-                wordsWithTh.Add(word);
                 Console.WriteLine(word);
             }
         }
@@ -58,8 +56,13 @@ namespace LINQworksheet
 
         public void NamesWithoutRepeatsWithLINQ(List<string> names)
         {
-            List<string> namesWithoutRepeat = new List<string>();
-            //var namesWithoutRepeat = names.Where(n => n.)
+            var namesWithoutRepeat = names.Distinct().ToList();
+            foreach (string name in namesWithoutRepeat)
+            {
+                Console.WriteLine(name);
+            }
         }
+
+
     }
 }
