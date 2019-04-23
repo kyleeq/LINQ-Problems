@@ -63,6 +63,18 @@ namespace LINQworksheet
             }
         }
 
+        public void AverageGrade()
+        {
 
+        }
+        public void AlphabeticOrder(string word)
+        {
+            var alphabeticString = word.ToUpper().ToCharArray();
+            var wordArray = alphabeticString.GroupBy(j => j).ToDictionary(j => j.Key, j => j.Count()).OrderBy(j => j.Key); 
+            foreach (KeyValuePair<char,int> character in wordArray)
+            {
+                Console.Write(""+character.Key + character.Value);
+            }
+        }
     }
 }

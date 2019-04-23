@@ -12,7 +12,7 @@ namespace LINQworksheet
         {
             Problems problems = new Problems();
 
-            problems.NamesWithoutRepeatsWithLINQ(problems.names);
+            problems.AlphabeticOrder("terrill");
             Console.ReadLine();
         }
     }
